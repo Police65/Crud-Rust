@@ -12,7 +12,6 @@
       </div>
       <div class="card-body">
         <form style="text-align: left;" method="post" action="/add">
-
           <div class="form-group">
             <label for="name">Producto: </label>
             <input type="text" class="form-control" name="name" id="nombre" aria-describedby="helpId"

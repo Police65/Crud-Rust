@@ -13,9 +13,7 @@
             <div class="card-body">
                 <form style="text-align: left;" method="post" action="/update">
 
-
                     <input type="hidden" class="form-control" name="id" id="id" placeholder="" value={{product.id}}>
-
 
                     <div class="form-group">
                         <label for="">Producto: </label>
