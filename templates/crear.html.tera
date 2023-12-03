@@ -1,0 +1,42 @@
+{%extends "base" %}
+{% block content %}
+<div class="row mt-3">
+  <div class="col-md" style="margin-top: 10%;margin-left: 30%;margin-right: 30%;">
+    <div class="card text-center">
+      <div class="card-header">
+        <nav class="nav justify-content-around navbar-light bg-light">
+          <div class="nav navbar-nav">
+            <a class="nav-item nav-link" href="/index">Volver</a>
+          </div>
+        </nav>
+      </div>
+      <div class="card-body">
+        <form style="text-align: left;" method="post" action="/add">
+
+          <div class="form-group">
+            <label for="name">Producto: </label>
+            <input type="text" class="form-control" name="name" id="nombre" aria-describedby="helpId"
+              placeholder="Nombre o Descripcion">
+          </div>
+
+          <div class="form-group">
+            <label for="quantity">Cantidad:</label>
+            <input type="text" name="quantity" id="cantidad" class="form-control" placeholder="Favor Numeros Enteros"
+              aria-describedby="helpId">
+          </div>
+
+          <div class="form-group">
+            <label for="price">Precio:</label>
+            <input type="text" name="price" id="precio" class="form-control" placeholder="Valor de Venta del Producto"
+              aria-describedby="helpId">
+          </div>
+
+      </div>
+      <div class="card-footer text-muted">
+        <button type="submit" class="btn btn-primary">Ingresar Producto</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

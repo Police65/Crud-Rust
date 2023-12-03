@@ -1,0 +1,6 @@
+
+<nav class="nav justify-content-around navbar-light bg-light" id="guachafita">
+    <div class="nav navbar-nav">
+        <a class="nav-item nav-link" href="/crear">Nuevo Producto</a>
+    </div>
+</nav>

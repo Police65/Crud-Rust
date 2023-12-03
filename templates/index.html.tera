@@ -1,0 +1,56 @@
+{% extends "base" %}
+
+
+{% block content %}
+{% include "menu"%}
+<div class="row mt-3">
+  <div class="col-md" style="margin-top: 5%;margin-left: 30%;margin-right: 30%; margin-bottom:5%;">
+    <div class="card text-center">
+      <div class="card-header">
+
+
+      </div>
+
+      <div class="card-body">
+        <h4 class="card-title">Unidades en Inventario</h4>
+        <p class="card-text">
+        <div class="container-fluid">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Descripcion</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Interaccion</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for product in products %}
+              <tr>
+                <td>{{product.name}}</td>
+                <td>{{product.quantity}}</td>
+                <td>{{product.price | round(precision = 2)}}</td>
+                <td>
+                  <a name="" id="" class="btn btn" style="background-color: rgba(0,0,0,.03);" role="button" href="/borrar/{{product.id}}">Borrar</a>
+                  <a name="" id="" class="btn btn" style="background-color: rgba(0,0,0,.03);" role="button" href="/editar/{{product.id}}">Editar</a>
+
+                </td>
+              </tr>
+              {% endfor %}
+
+            </tbody>
+          </table>
+        </div>
+        </p>
+      </div>
+      <div class="card-footer text-muted" style="padding-bottom: 5%;">
+        <nav class="nav justify-content-around navbar-light bg-light">
+          <!--<div class="nav navbar-nav">
+              <a class="nav-item nav-link" href="#">Borrar Productos</a>
+          </div>-->
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content%}
